@@ -40,6 +40,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  transition: 0.3s;
+}
+.card:hover{
+transform: scale(1.05);
+transition: 0.3s;
 }
 .card-title{
   font-weight: 700;
