@@ -20,15 +20,50 @@ p, h1, h2, h3, h4, h5, h6{
   font: inherit;
   vertical-align: baseline;
 }
+button{
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+}
+button {
+  cursor: pointer;
+}
 .App {
   text-align: center;
 }
 .card{
-  max-width: 350px;
+  max-width: 250px;
   padding: 10px 20px;
-  border: 1px solid #f00;
+  box-shadow: 0px 2px 16px hsla(205, 67%, 38%, 0.16);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+.card-title{
+  font-weight: 700;
+  font-size: 18px;
+}
+.card-subtitle{
+  font-size: 16px;
+  color: hsl(0, 0%, 62%);
+  margin-top: 5px;
+}
+.card-text{
+  font-size: 14px;
+  color: hsl(0, 0%, 23%);
+  margin-top: 10px;
+}
+.card-btn{
+    color: #fff;
+    background-color: hsl(208, 7%, 46%);
+    border-color: #6c757d;
+    border-radius: 5px;
+    padding: 3px 15px 5px 15px;
+    margin-top: 15px;
+    width: 50%;
+}
+.card-btn:hover{
+  background-color: hsl(208, 7%, 50%);
 }

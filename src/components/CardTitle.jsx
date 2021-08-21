@@ -3,7 +3,7 @@ function CardTitle(props) {
     if(props){
     return(
         <>
-       <h2>{props.title}</h2>
+       <h2 className="card-title">{props.title}</h2>
         </>
     )
     }

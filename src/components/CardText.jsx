@@ -1,7 +1,7 @@
 function CardText(props) {
     if (props) {
        return(
-        <p>{props.text}</p>
+        <p className="card-text">{props.text}</p>
        )
     }
 }
