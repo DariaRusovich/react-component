@@ -1,0 +1,40 @@
+.tool-tip{
+    display: inline-flex;
+    margin: 100px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.tool-tip-btn{
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border-radius: 5px;
+    padding: 10px 15px;
+   
+}
+.tool-tip-btn:hover{
+    background-color: #43494e;
+}
+.tool-tip-body{
+    position: absolute;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    --offset: 10px;
+    width: 150px;
+}
+.tool-tip-body.top{
+    bottom: calc(100% + var(--offset))
+}
+.tool-tip-body.right{
+    left: calc(100% + var(--offset))
+}
+.tool-tip-body.bottom{
+    top: calc(100% + var(--offset))
+}
+.tool-tip-body.left{
+    right: calc(100% + var(--offset))
+}

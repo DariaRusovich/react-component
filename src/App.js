@@ -1,20 +1,15 @@
-import CardImg from "./components/CardImg";
-import CardSubtitle from "./components/CardSubtitle";
-import CardTitle from "./components/CardTitle";
-import CardText from "./components/CardText";
-import CardBtn from "./components/CardBtn";
+import ToolTip from './ToolTip'
+
 
 
 function App() {
+  
   return (
     <>
-      <div className="card">
-        <CardTitle title="Card Title" />
-        <CardSubtitle subtitle="Card Subtitle"></CardSubtitle>
-        <CardText text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Repudiandae, ipsa laudantium? Ullam quam nisi facere?" />
-        <CardBtn  btn="Button"/>
-      </div>
+     <ToolTip position="top" text="Tooltip on top">Tooltip button</ToolTip>
+     <ToolTip position="right" text="Tooltip on right">Tooltip button</ToolTip>
+     <ToolTip position="bottom" text="Tooltip on bottom">Tooltip button</ToolTip>
+     <ToolTip position="left" text="Tooltip on left">Tooltip button</ToolTip>
     </>
   );
 }
