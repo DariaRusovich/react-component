@@ -1,0 +1,28 @@
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+.dropdown-btn {
+  padding: 15px 25px;
+  box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+}
+.dropdown-btn::after {
+  content: "\25BC";
+  padding-left: 10px;
+}
+.dropdown-list {
+  border-radius: 3px;
+  padding: 0;
+  box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+}
+.dropdown-list li {
+  padding: 10px 10px;
+ 
+}
+.dropdown-list li:not(:last-child){
+    border-bottom: 1px solid hsla(0, 0%, 21%, 0.1);
+}
+.dropdown-list li:hover{
+    background-color: hsl(210, 16%, 93%);
+    transition: 0.3s;
+}

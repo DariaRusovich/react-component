@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 1000px; /*development*/
 }
 
 code {
@@ -28,6 +29,10 @@ button{
 }
 button {
   cursor: pointer;
+}
+ol,
+ul {
+  list-style: none;
 }
 .App {
   text-align: center;

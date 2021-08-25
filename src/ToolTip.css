@@ -27,14 +27,14 @@
     width: 150px;
 }
 .tool-tip-body.top{
-    bottom: calc(100% + var(--offset))
+    bottom: calc(100% + var(--offset));
 }
 .tool-tip-body.right{
-    left: calc(100% + var(--offset))
+    left: calc(100% + var(--offset));
 }
 .tool-tip-body.bottom{
-    top: calc(100% + var(--offset))
+    top: calc(100% + var(--offset));
 }
 .tool-tip-body.left{
-    right: calc(100% + var(--offset))
+    right: calc(100% + var(--offset));
 }
