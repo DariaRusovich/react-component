@@ -7,6 +7,7 @@
 }
 
 .accordion-heading{
+    border: 1px solid transparent;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,19 @@
 }
 
 .accordion-heading:hover{
-    background-color: hsl(210, 16%, 93%);
     transition: 0.3s;
+    background-color: rgba(0,0,0,.125);
+}
+.accordion-body{
+    background-color: hsl(210, 15%, 95%);
+    opacity: 0;
+    height: 0;
+    display: flex;
+    overflow: hidden;
+    transition: all 600ms ease-in-out;
+}
+.accordion-body.show{
+    opacity: 1;
+    height: 150px;
+    padding: 20px;
 }

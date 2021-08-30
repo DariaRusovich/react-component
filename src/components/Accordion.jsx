@@ -1,13 +1,15 @@
 import "./Accordion.css";
 
-export default function Accordion({ children, title }) {
+export default function Accordion({ children, title, active, setActive }) {
   return (
     <div className="accordion-item">
-      <div className="accordion-heading">
+      <div onClick={() => setActive(title)} className="accordion-heading">
         <h2 className="accordion-header">{title}</h2>
-        <span>|||</span>
+        <span>
+            {(active === title ? 'X' : '|||')}
+        </span>
       </div>
-      <div className="accordion-body">
+      <div className={(active === title ? 'show' : '') + ' accordion-body'}>
         <p>{children}</p>
       </div>
     </div>
