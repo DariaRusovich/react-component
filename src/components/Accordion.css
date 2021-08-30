@@ -25,7 +25,7 @@
     opacity: 0;
     height: 0;
     display: flex;
-    overflow: hidden;
+    overflow: auto;
     transition: all 600ms ease-in-out;
 }
 

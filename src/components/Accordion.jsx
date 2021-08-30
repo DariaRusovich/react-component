@@ -15,3 +15,4 @@ export default function Accordion({ children, title, active, setActive }) {
     </div>
   );
 }
+

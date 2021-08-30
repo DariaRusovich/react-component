@@ -7,14 +7,17 @@ export default function Dropdown({ data, children }) {
   return (
     <div className="dropdown">
         <div>
-      <button onClick={() => setOpen(prev => !prev)} className="dropdown-btn">{children}</button>
-     {open && data && data.length > 0 && (
+      <button onClick={() => setOpen(prev => !prev)} className="dropdown-btn">
+        {children}
+        {open && data && data.length > 0 && (
         <ul className="dropdown-list">
           {data.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
       )} 
+        </button>
+    
       </div>
     </div>
   );
