@@ -28,8 +28,9 @@
     overflow: hidden;
     transition: all 600ms ease-in-out;
 }
+
 .accordion-body.show{
     opacity: 1;
-    height: 150px;
+    height: 100px;
     padding: 20px;
 }
