@@ -1,6 +1,7 @@
 .dropdown {
   display: flex;
   justify-content: center;
+  padding-bottom: 100px;
 }
 .dropdown-btn {
   padding: 15px 25px;

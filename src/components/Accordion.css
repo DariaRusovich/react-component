@@ -1,0 +1,21 @@
+.accordion-item{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.accordion-heading{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accordion-heading:hover{
+    background-color: hsl(210, 16%, 93%);
+    transition: 0.3s;
+}
