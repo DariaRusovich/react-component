@@ -1,18 +1,22 @@
+import { useState } from "react";
 import "./Accordion.css";
 
-export default function Accordion({ children, title, active, setActive }) {
+export default function Accordion({ title, children, btnText }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="accordion-item">
-      <div onClick={() => setActive(title)} className="accordion-heading">
-        <h2 className="accordion-header">{title}</h2>
-        <span className='accordion-icon'>
-            {(active === title ? '▲' : '▼')}
-        </span>
+    <div className="accordion-wrap">
+     <div className="accordion">
+     <div onClick={() => setOpen((prev) => !prev)} className="accordion-head">
+        <h2>{title}</h2> <span className="accordion-icon">{open ? "▲" : "▼"} </span>
       </div>
-      <div className={(active === title ? 'show' : '') + ' accordion-body'}>
-        <p>{children}</p>
-      </div>
+      
+        <div className={(open ? 'show' : '') + ' accordion-content'}>
+          <p>{children}</p>
+          <button className="accordion-btn">{btnText}</button>
+        </div>
+      
+     </div>
     </div>
   );
 }
-

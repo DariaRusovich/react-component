@@ -1,11 +1,16 @@
+import { useState } from "react";
+
 import ToolTip from "./ToolTip";
 import Dropdown from "./Dropdown";
+import AccordionFlush from "./components/AccordionFlush";
 import Accordion from "./components/Accordion";
-import { useState } from "react";
+import Gap from "./components/Gap";
+
 
 function App() {
   const listItems = ["Situation", "Task", "Action", "Result"];
   const [active, setActive] = useState("")
+  console.log(setActive);
   
   return (
     <>
@@ -22,13 +27,13 @@ function App() {
         Tooltip button
       </ToolTip>
       <Dropdown data={listItems}>Dropdown button</Dropdown>
-      <Accordion title="Title1" active={active} setActive={setActive}>
+      <AccordionFlush title="Title1" active={active} setActive={setActive}>
         This is the first item's accordion body. It is shown by default, until
         the collapse plugin adds the appropriate classes that we use to style
         each element. These classes control the overall appearance, as well as
         the showing and hiding via CSS transitions.
-      </Accordion>
-      <Accordion title="Title2" active={active} setActive={setActive}>
+      </AccordionFlush>
+      <AccordionFlush title="Title2" active={active} setActive={setActive}>
         You can modify any of this with custom CSS or overriding our default
         variables. It's also worth noting that just about any HTML can go within
         the .accordion-body, though the transition does limit overflow.
@@ -40,12 +45,23 @@ function App() {
         the collapse plugin adds the appropriate classes that we use to style
         each element. These classes control the overall appearance, as well as
         the showing and hiding via CSS transitions.
-      </Accordion>
-      <Accordion title="Title3" active={active} setActive={setActive}> 
+      </AccordionFlush>
+      <AccordionFlush title="Title3" active={active} setActive={setActive}> 
       This is the first item's accordion body. It is shown by default, until
       the collapse plugin adds the appropriate classes that we use to style
       each element. These classes control the overall appearance, as well as
-      the showing and hiding via CSS transitions.</Accordion>
+      the showing and hiding via CSS transitions.</AccordionFlush>
+      <Gap/>
+      <Accordion title="Accordion-item 1" btnText="Click">This is the first item's accordion body. It is shown by default, until
+        the collapse plugin adds the appropriate classes that we use to style
+        each element. These classes control the overall appearance, as well as
+        the showing and hiding via CSS transitions.</Accordion>
+      <Accordion title="Accordion-item 2" btnText="Click">You can modify any of this with custom CSS or overriding our default
+        variables. It's also worth noting that just about any HTML can go within
+        the .accordion-body, though the transition does limit overflow.</Accordion>
+        <Accordion title="Accordion-item 3" btnText="Click">You can modify any of this with custom CSS or overriding our default
+        variables. It's also worth noting that just about any HTML can go within
+        the .accordion-body, though the transition does limit overflow.</Accordion>
     </>
   );
 }

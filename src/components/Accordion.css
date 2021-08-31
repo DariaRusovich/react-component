@@ -1,39 +1,54 @@
-.accordion-item{
-    background-color: #fff;
-    border: 1px solid rgba(0,0,0,.125);
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 10px;
+.accordion-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
-
-.accordion-heading{
-    border: 1px solid transparent;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
+.accordion {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  width: 50%;
 }
-
-.accordion-heading:hover{
+.accordion-head {
+  padding: 20px;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.accordion-head:hover{
     transition: 0.3s;
     background-color: rgba(0,0,0,.125);
 }
-.accordion-body{
-    background-color: hsl(210, 15%, 95%);
+.accordion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    transition: all 600ms ease-in-out;
     opacity: 0;
     height: 0;
-    display: flex;
-    overflow: auto;
-    transition: all 600ms ease-in-out;
+    background-color: hsl(210, 15%, 95%);
 }
-
-.accordion-body.show{
+.accordion-content.show{
     opacity: 1;
-    height: 100px;
+    height: 120px;
     padding: 20px;
+   
 }
 .accordion-icon{
     color: hsl(0, 0%, 65%);
+}
+.accordion-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: hsl(152, 69%, 31%);
+    color: #fff;
+    min-width: 80px;
+    transition: 0.3s;
+}
+.accordion-btn:hover{
+    background-color: hsl(152, 68%, 23%);
+    transition: 0.3s;
 }
